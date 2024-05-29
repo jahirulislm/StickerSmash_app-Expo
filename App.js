@@ -47,6 +47,7 @@ export default function App() {
     setIsModalVisible(true);
   };
 
+  // take screenshot and save it on local storage
   const onSaveImageAsync = async () => {
     try {
       const localUri = await captureRef(imageRef, {
