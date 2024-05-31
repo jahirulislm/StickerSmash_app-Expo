@@ -1,3 +1,4 @@
+import "expo-dev-client";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image, LogBox, Platform } from "react-native";
 import ImageViewer from "./components/ImageViewer";

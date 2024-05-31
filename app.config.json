@@ -7,22 +7,29 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
       "supportsTablet": true
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.anonymous.StickerSmash"
-    },
+
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "53691ee2-c6da-425c-a115-d322c6376803"
+      }
+    },
+    "android": {
+      // "adaptiveIcon": {
+      //   "foregroundImage": "./assets/adaptive-icon.png",
+      //   "backgroundColor": "#ffffff"
+      // },
+      "package": "com.anonymous.StickerSmash"
+    },
+    "owner": "jahirhassan"
   }
 }
