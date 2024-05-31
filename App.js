@@ -13,10 +13,13 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import * as MediaLibrary from "expo-media-library";
 import { captureRef } from "react-native-view-shot";
 import domtoimage from "dom-to-image";
+import * as SplashScreen from "expo-splash-screen";
 
 // loading assets from local directory
 const PlaceholderImage = require("./assets/images/background-image.png");
 
+SplashScreen.preventAutoHideAsync();
+setTimeout(SplashScreen.hideAsync, 500);
 export default function App() {
   const imageRef = useRef();
   const [selectedImage, setSelectedImage] = useState(null);
@@ -102,15 +105,6 @@ export default function App() {
           )}
         </View>
       </View>
-      <Text style={{ color: "green" }}>
-        Open up App.js to start working on your app!
-      </Text>
-      <View style={styles.imageContainer}>
-        <ImageViewer
-          placeholderImageSource={PlaceholderImage}
-          selectedImage={selectedImage}
-        />
-      </View>
       {showAppOptions ? (
         <View style={styles.optionsContainer}>
           <View style={styles.optionsRow}>
@@ -140,7 +134,7 @@ export default function App() {
       <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
         <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
       </EmojiPicker>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </GestureHandlerRootView>
   );
 }
